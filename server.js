@@ -15,7 +15,6 @@ app.post('/completions', async (req, res) => {
             return {
                 ...message,
                 content: "Bunu bir tech dev olarak yanıtla. " + message.content,
-
             };
         }
         return message;
@@ -44,3 +43,4 @@ app.post('/completions', async (req, res) => {
     }
 });
 
+app.listen(PORT, () => console.log("Your server is running on PORT " + PORT));
